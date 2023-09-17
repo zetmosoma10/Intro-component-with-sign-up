@@ -1,0 +1,143 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  /* ### Accent */
+  --Blue: hsl(248, 32%, 49%);
+  /* ### Neutral */
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+  background-image: url(images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--Red);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-image: url(images/bg-intro-desktop.png);
+  }
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 36px;
+  letter-spacing: -0.29px;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 5rem;
+    line-height: 55px;
+    letter-spacing: -0.52px;
+  }
+}
+
+/* Trial */
+
+.trial {
+  background-color: var(--Blue);
+  text-align: center;
+  padding: 1.7rem 0;
+  border-radius: 10px;
+}
+
+.trial__bold {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 26px;
+  letter-spacing: 0.27px;
+}
+
+/* Button */
+.btn {
+  background-color: var(--Green);
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1.5rem 0;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #77e2b3;
+}
+
+.btn:focus {
+  outline-color: #fff;
+}
+
+/* Input */
+/* .input {
+
+} */
+
+.input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--Grayish-Blue);
+  background: #fff;
+  padding-right: 2.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+input {
+  caret-color: var(--Blue);
+  padding: 1.5rem 0;
+  border: 0;
+  color: var(--Dark-Blue);
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  outline: 0;
+  text-indent: 2rem;
+  width: 100%;
+}
+
+.input-container:focus {
+  outline: 0;
+  border-color: var(--Blue);
+}
+
+input::placeholder {
+  color: var(--Dark-Blue);
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  line-height: 26px;
+  opacity: 0.7;
+}
