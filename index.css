@@ -98,38 +98,41 @@ p {
   outline-color: #fff;
 }
 
-/* Input */
-/* .input {
+/* INPUTS */
 
-} */
+.input-wrapper {
+  margin-bottom: 1.6rem;
+}
 
 .input-container {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--Grayish-Blue);
   background: #fff;
-  padding-right: 2.5rem;
+  border: 0;
   border-radius: 5px;
+  position: relative;
   overflow: hidden;
+}
+
+.input-container input {
+  padding-right: 3rem;
+}
+
+.input-container input:focus {
+  border-color: var(--Blue);
 }
 
 input {
   caret-color: var(--Blue);
   padding: 1.5rem 0;
-  border: 0;
   color: var(--Dark-Blue);
+  border: 0.5px solid var(--Grayish-Blue);
   font-family: inherit;
   font-size: 1.4rem;
   font-weight: 600;
   letter-spacing: 0.25px;
   outline: 0;
+  border-radius: 5px;
   text-indent: 2rem;
   width: 100%;
-}
-
-.input-container:focus {
-  outline: 0;
-  border-color: var(--Blue);
 }
 
 input::placeholder {
@@ -140,4 +143,59 @@ input::placeholder {
   letter-spacing: 0.25px;
   line-height: 26px;
   opacity: 0.7;
+}
+
+.icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+input[type="email"]:focus {
+  border-color: var(--Blue);
+}
+
+.invalid-input {
+  /* color: var(--Red); */
+  border-color: var(--Red);
+}
+
+.error {
+  display: block;
+  padding-right: 15px;
+  text-align: end;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--Red);
+}
+
+/* Form */
+.form-container {
+  background-color: #fff;
+  padding: 4rem 3rem;
+  width: 54rem;
+  border-radius: 10px;
+}
+
+.terms {
+  color: var(--Grayish-Blue);
+  font-size: 1.1rem;
+  line-height: 26px;
+  text-align: center;
+}
+
+.terms-services {
+  color: var(--Red);
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  outline: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .input-wrapper {
+    margin-bottom: 2rem;
+  }
 }
